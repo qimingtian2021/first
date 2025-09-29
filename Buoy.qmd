@@ -143,4 +143,15 @@ combined_data1 %>%
   ) %>%
   arrange(desc(air_temp_NA_count), desc(water_temp_NA_count))
 
+
+```
+
+```{r}
+## Question: Does water temperature change with time?
+
+plot(combined_data1$datetime, combined_data1$WTMP, type = "l",
+     xlab = "Time", ylab = "Water Temperature (°C)",
+     main = "Buoy Water Temperature over Time")
+
+##The buoy data show clear seasonal cycles in water temperature, with higher values in summer and lower in winter. Over the decades, there is also a gradual upward shift in the average water temperature, suggesting a possible long-term warming trend.
 ```
